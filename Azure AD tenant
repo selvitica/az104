@@ -10,6 +10,7 @@ This domain name can be customized later, say BappujiCentralSchool.com basically
 Now I need to register all my students with the tenant. For this I can create groups in the az AD cls_grp_10 and cls_grp_11. Then I add the students to the respective groups.
 student1@BappujiCentralSchool.com,student2@BappujiCentralSchool.com [cls_grp_10]
 student3@BappujiCentralSchool.com,student4@BappujiCentralSchool.com [cls_grp_11]
+Az also offers bulk adding,removing users. like you can have a csv that contains all the student details (title, class etc) and do in one shot.
 
 Now I create two storage accounts [for putting the ebooks]. Then assign the cls_grp to the respective storage. Think of storage like two harddisks. This way only the required class will have access to the ebook they need. Azure takes of checking if the student credentials and the group memeberships. 
 
