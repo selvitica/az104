@@ -1,0 +1,33 @@
+azure active directory tenant
+example:
+Assume I am a teacher who teaches physics and mathematics to class 10 and 11 students in the school called Bappuji.
+Let see, how can I provide access to phy-101-ebook to class 10 and similarly math-101 to the other using azure.
+
+First I create a azure account and then setup active directory 
+with initial domain name : BappujiCentralSchool.onmicrosoft.com
+This domain name can be customized later, say BappujiCentralSchool.com basically by purchasing domain externally and then adding it to azure.
+
+Now I need to register all my students with the tenant. For this I can create groups in the az AD cls_grp_10 and cls_grp_11. Then I add the students to the respective groups.
+student1@BappujiCentralSchool.com,student2@BappujiCentralSchool.com [cls_grp_10]
+student3@BappujiCentralSchool.com,student4@BappujiCentralSchool.com [cls_grp_11]
+
+Now I create two storage accounts [for putting the ebooks]. Then assign the cls_grp to the respective storage. Think of storage like two harddisks. This way only the required class will have access to the ebook they need. Azure takes of checking if the student credentials and the group memeberships. 
+
+If student1 after 1 year can get promoted to class 11 or the bad case class 11 student can end up demoted to 10th. Both the scenario, their group has to be updated so that they get the required resource (here ebook). 
+Instead of doing this manually az provides concept of 'dynamic groups' and that way say student will automatically gets the resources based on the class as they getpromoted or demoted. 
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
