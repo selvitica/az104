@@ -8,7 +8,7 @@ New-AzResourceGroupDeployment `
 -TemplateFile $HOME/az104-04-vms-loop-template.json `
 -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
 
-
+az vm list --resource-group $rgName -o table
 
 
 
