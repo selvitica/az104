@@ -1,0 +1,15 @@
+# raw instead of direct else HTML response.
+wget https://raw.githubusercontent.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/f8a88a2b8eb4812849ae97db6559def3acb9be52/Allfiles/Labs/04/az104-04-vms-loop-parameters.json
+wget https://raw.githubusercontent.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/f8a88a2b8eb4812849ae97db6559def3acb9be52/Allfiles/Labs/04/az104-04-vms-loop-template.json
+
+#cloud-shell ps
+New-AzResourceGroupDeployment ` 
+-ResourceGroupName $rgName `
+-TemplateFile $HOME/az104-04-vms-loop-template.json `
+-TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
+
+
+
+
+
+
