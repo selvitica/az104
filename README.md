@@ -1,2 +1,2 @@
 # az104
-labs and simple explanations 
+[labs](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/blob/master/Instructions/Labs/)
