@@ -11,5 +11,8 @@ New-AzResourceGroupDeployment `
 az vm list --resource-group $rgName -o table
 
 
+#clean up
 
-
+Get-AzResourceGroup -Name 'az104-04*'
+Get-AzResourceGroup -Name 'az104-04*' | Remove-AzResourceGroup -Force -AsJob
+Get-AzResourceGroup -Name 'az104-04*'
